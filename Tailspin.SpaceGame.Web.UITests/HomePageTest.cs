@@ -10,8 +10,8 @@ using System.Collections;
 namespace UITests
 {
     [TestFixture("Chrome")]
-    [TestFixture("Firefox")]
-    [TestFixture("IE")]
+    //[TestFixture("Firefox")]
+    //[TestFixture("IE")]
     public class HomePageTest
     {
         private string browser;
@@ -38,12 +38,12 @@ namespace UITests
                   case "Chrome":
                     driver = new ChromeDriver(cwd);
                     break;
-                  case "Firefox":
-                    driver = new FirefoxDriver(cwd);
-                    break;
-                  case "IE":
-                    driver = new InternetExplorerDriver(cwd);
-                    break;
+                //  case "Firefox":
+                //    driver = new FirefoxDriver(cwd);
+                 //   break;
+                //  case "IE":
+                //    driver = new InternetExplorerDriver(cwd);
+                //    break;
                   default:
                     throw new ArgumentException($"'{browser}': Unknown browser");
                 }
